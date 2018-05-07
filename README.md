@@ -10,6 +10,7 @@
 
 # How to 
 ## data transformation
+월, 일, 시간, day_of_week, elspasetime
 ### time change
 * 시간을 특정 시간에서 부터 지나간 시간으로 숫자로 변경하자
 - 01-01 01 = 01
@@ -35,17 +36,23 @@ get_elapsed_hour(t1, t2)
 ```
 
 # 순서
+### 데이터 정재
+- load_data.py
+
+month, day, hour, weekday, elapsedtime, season, holiday, workingday, weather, temp,  atemp, humidity, windspeed, casual, registered, count
+
 * 특별한 튜닝을 하지 않고여러 알고리즘만 변경해 가면서 구해보자.
 * 알고리즘을 정리하고 
 * 에러를 기록하고
 * 앙상블을 한번 써보자.
+```
+num, algorithm, mean_error, log_mean_error
+1,linear_model, 33846.816, 1.5427443
+```
+
 
 1. Ordinary Least Squares 로 베이스를 구한다.
 2. log Least Squares 로 차이점을 구한다.
-
-
-
-
 
 # Data Fields
 - datetime - hourly date + timestamp  
