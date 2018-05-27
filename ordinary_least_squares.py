@@ -1,5 +1,5 @@
 from sklearn import linear_model
-from sklearn.metrics import mean_squared_error, mean_squared_log_error
+from sklearn.metrics import mean_squared_error, mean_squared_log_error, mean_absolute_error
 import numpy as np
 
 import matplotlib.pyplot as plt
@@ -37,12 +37,18 @@ y_test.shape
 a = np.array([[1,2]])
 a.shape
 
-np.concatenate([[1,2]], [[100,200]])
+# np.concatenate([[1,2]], [[100,200]])
+
+y_train.shape
+
+y_pred.shape
 
 plt.scatter(y_train, y_pred, color='black')
 
 plt.show(block=False)
 
 print('Coefficients: ', regr.coef_)
-print('Mean squre error: ', mean_squared_error(y_test, y_pred))
+print('Mean squre error: ', mean_squared_error(y_train, y_pred))
+print('Mean absolute error: ', mean_absolute_error(y_train, y_pred))
+
 print('Mean squre log error: ', mean_squared_log_error(y_test, y_pred))
